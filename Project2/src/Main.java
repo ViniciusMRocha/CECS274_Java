@@ -51,6 +51,8 @@ public class Main {
     public static int search(int[] ArrayName, int low, int high, int value)
     // search for inputSearchNum
     {
+        //StopWatchNano.reset();
+        //StopWatchNano.start();
         int mid = (low + high) / 2;
         if (low <= high) {
 
@@ -99,6 +101,8 @@ public class Main {
             return -1;
         }
 
+        //StopWatchNano.stop();
+        //System.out.println(StopWatchNano.getElapsedTime());
 
     }
 }
