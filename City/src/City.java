@@ -42,5 +42,7 @@ public class City implements Comparable{
         for (int i = 0; i < cities.size(); i++) {
             System.out.println(cities.get(i).name + ", " + cities.get(i).state);
         }
+
+        System.out.println("Git Test: ");
     }
 }
