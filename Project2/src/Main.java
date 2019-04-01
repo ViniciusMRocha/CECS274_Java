@@ -54,15 +54,18 @@ public class Main {
         int mid = (low + high) / 2;
         if (low <= high) {
 
-            if (ArrayName[mid] == value) {
+            if (ArrayName[mid] == value)
+            {
 
 
                 int lastIndex = -1;
                 int count = -1;
 
-                for (int i = 0; (i < ArrayName.length); i++) {
+                for (int i = 0; (i < ArrayName.length); i++)
+                {
                     // if the value on indexed is equal to teh value searched
-                    if (ArrayName[i] == value) {
+                    if (ArrayName[i] == value)
+                    {
                         // count how many times the match happened
                         count = count + 1;
                         // gets the possition of the last number
@@ -72,23 +75,27 @@ public class Main {
 
                 //substract the last index from the amount of times the element showed up, give the fist possition
                 System.out.println("Result: [" + (lastIndex - count) + "," + lastIndex + "]");
+
+                return mid;
             }
 
-            return mid;
-        }
 
-        else if (ArrayName[mid] < value) {
-            return search(ArrayName, mid + 1, high, value);
-        }
+            else if (ArrayName[mid] < value)
+            {
+                return search(ArrayName, mid + 1, high, value);
+            }
 
-        else if (ArrayName[mid] > value) {
-            return search(ArrayName, low, mid - 1, value);
+            else
+            {
+                return search(ArrayName, low, mid - 1, value);
+            }
         }
 
         // not working
         else
         {
-            System.out.print("Value not found");
+            System.out.println("Value not found");
+            System.out.println("[-1, "+low+"]");
             return -1;
         }
 
