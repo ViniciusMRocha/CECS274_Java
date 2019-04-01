@@ -43,6 +43,6 @@ public class City implements Comparable{
             System.out.println(cities.get(i).name + ", " + cities.get(i).state);
         }
 
-        System.out.println("This is gonna mess up Test: ");
+        System.out.println("Does this create an error: ");
     }
 }
