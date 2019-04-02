@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 //import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         // creates an array list with set values
         Scanner inputNum = new Scanner(System.in);  // Create a Scanner object
@@ -23,7 +24,6 @@ public class Main {
         String inputSearch = seachNum.nextLine();  // Read user input
         int inputSearchNum = Integer.parseInt(inputSearch);
         int searchResult = search(bubbleSort(ArrayName), 0, inputLenghtNum, inputSearchNum);
-
     }
 
     // method takes in a array list of integers
@@ -38,6 +38,7 @@ public class Main {
                 if (ArrayName[j] > ArrayName[j + 1]) {
                     // if the first number is larger, swap the number
 
+                    // Uses the variable swap to change the position of the numbers found
                     int swap = ArrayName[j];
                     ArrayName[j] = ArrayName[j + 1];
                     ArrayName[j + 1] = swap;
@@ -48,8 +49,9 @@ public class Main {
     }
 
 
+
     public static int search(int[] ArrayName, int low, int high, int value)
-    // search for inputSearchNum
+
     {
         //StopWatchNano.reset();
         //StopWatchNano.start();
@@ -58,8 +60,20 @@ public class Main {
 
             if (ArrayName[mid] == value)
             {
+                int firstPosition = index.findIndex(ArrayName,value);
+                int LastPos = shortenArray.LastPosition(ArrayName,value);
 
+                System.out.println("First Position: "+firstPosition);
+//
+//
+// TO BE FIXEDfind a way to return the value from shortArray
+//
+//
+                System.out.println("LastPos : "+LastPos);
 
+/*
+
+OLDER VERSION OF SEARCH
                 int lastIndex = -1;
                 int count = -1;
 
@@ -78,9 +92,9 @@ public class Main {
                 //substract the last index from the amount of times the element showed up, give the fist possition
                 System.out.println("Result: [" + (lastIndex - count) + "," + lastIndex + "]");
 
+*/
                 return mid;
             }
-
 
             else if (ArrayName[mid] < value)
             {
@@ -93,8 +107,7 @@ public class Main {
             }
         }
 
-        // not working
-        else
+        else // Do the following if the value was not found
         {
             System.out.println("Value not found");
             System.out.println("[-1, "+low+"]");
