@@ -29,8 +29,4 @@ public class shortenArray {
     }
 }
 
-//
-//
 // This method is not passing back the value found
-//
-//
