@@ -14,11 +14,11 @@ public class BinarySearcher {
      @return the index at which the value occurs, or -1
      if it does not occur in the array
      */
+
+
     public static int[] searchLeft(int[] a, int low, int high, int value) {
         int mid = (low + high) / 2;
         int[] range = new int[2];
-
-        System.out.println("\nsearchLeft mid: " + mid);
 
         if (low <= high) {
             if ((mid == 0 || a[mid - 1] < value) && a[mid] == value){
@@ -44,7 +44,6 @@ public class BinarySearcher {
     public static int[] searchRight(int[] a, int low, int high, int value) {
         int mid = (low + high) / 2;
         int[] range = new int[2];
-        System.out.println("\nsearchRight mid: " + mid);
         if (low <= high) {
             if ((mid == a.length - 1 || a[mid + 1] > value) && a[mid] == value){
                 range[1] = mid;
