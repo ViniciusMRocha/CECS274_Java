@@ -16,14 +16,13 @@ public class shortenArray {
 
         // use pop to remote from the array?
 
-        for (int i=0; SmallArr [0] > value;i++)
-        {
-            //make the array smaller by removing the
-
-            int NewSmallArr [] = Arrays.copyOfRange(SmallArr, firstPosition+i, Arr.length);
-            getLastPosition = index.findIndex(NewSmallArr, value);
-            //getLastPosition = getLastPosition;
+        // Use while loop. Stop when the value on the index i in greater then the variable VALUE
+        int i=0;
+        // while the index value is less then or equal to the value that we are looking for
+        while (SmallArr [i] <= value){
+            i++;
         }
+        getLastPosition = i+firstPosition;
 
         return getLastPosition;
     }
@@ -32,5 +31,12 @@ public class shortenArray {
 //
 //
 // This method is not passing back the value found
+//for (; SmallArr [i] > value;i++)
+//        {
+//            //make the array smaller by removing the
 //
+//            int NewSmallArr [] = Arrays.copyOfRange(SmallArr, firstPosition+i, Arr.length);
+//            getLastPosition = index.findIndex(NewSmallArr, value);
+//            //getLastPosition = getLastPosition;
+//        }
 //
