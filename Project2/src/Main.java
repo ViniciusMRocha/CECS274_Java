@@ -55,44 +55,22 @@ public class Main {
     {
         //StopWatchNano.reset();
         //StopWatchNano.start();
+
+        int foundRange [] = new int[2];
+
         int mid = (low + high) / 2;
         if (low <= high) {
 
             if (ArrayName[mid] == value)
             {
-                int firstPosition = index.findIndex(ArrayName,value);
-                int LastPos = shortenArray.LastPosition(ArrayName,value);
+                int valueLocation = index.findIndex(ArrayName,value);
 
-                System.out.println("First Position: "+firstPosition);
-//
-//
-// TO BE FIXEDfind a way to return the value from shortArray
-//
-//
-                System.out.println("LastPos : "+LastPos);
-
-/*
-
-OLDER VERSION OF SEARCH
-                int lastIndex = -1;
-                int count = -1;
-
-                for (int i = 0; (i < ArrayName.length); i++)
-                {
-                    // if the value on indexed is equal to teh value searched
-                    if (ArrayName[i] == value)
-                    {
-                        // count how many times the match happened
-                        count = count + 1;
-                        // gets the possition of the last number
-                        lastIndex = i;
-                    }
+                // searching left
+                int i = 1
+                while (ArrayName[mid-i] == value) {
+                    foundRange [0] = index.findIndex(ArrayName,ArrayName[mid-i]);
                 }
 
-                //substract the last index from the amount of times the element showed up, give the fist possition
-                System.out.println("Result: [" + (lastIndex - count) + "," + lastIndex + "]");
-
-*/
                 return mid;
             }
 

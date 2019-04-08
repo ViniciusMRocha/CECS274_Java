@@ -33,8 +33,6 @@ public class BinarySearcher {
             1b) the value to the left is less than the value we are searching for
             AND
             2)the value we are searching for
-
-
              */
 
             if ((mid == 0 || a[mid - 1] < value) && a[mid] == value){
@@ -55,7 +53,9 @@ public class BinarySearcher {
 
             //This else block will only be run if the value is not found
         } else {
-
+            if (value > a[0]) {
+                range [1] = 1;
+            }
             //If range is 0, the last index in the array,
             range[0] = -1;
 
