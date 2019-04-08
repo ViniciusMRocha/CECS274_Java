@@ -24,6 +24,9 @@ public class Main {
         System.out.print("What number are you looking for? ");
         String inputSearch = seachNum.nextLine();  // Read user input
         int inputSearchNum = Integer.parseInt(inputSearch);
+
+        // Search the value on the array and print the first and last apparence possition. If the number is to there
+        // the code will return -1 and the location where that number should be
         int[] foundIndexes = BinarySearcher.firstAndLast(bubbleSort(ArrayName), 0, inputLenghtNum, inputSearchNum);
         System.out.println("[" + foundIndexes[0] + ", " + foundIndexes[1] + "]");
     }
@@ -49,20 +52,4 @@ public class Main {
         }
         return ArrayName;
     }
-
-
-    }
-
-
-/*
-
-Calling Binanry Searcher
-
-
-        int[] test = {1, 1, 3, 3, 3, 4, 5};
-        int searchValue = 0;
-
-        int[] foundIndexes = BinarySearcher.firstAndLast(test, 0, 6, searchValue);
-
-        System.out.println("[" + foundIndexes[0] + ", " + foundIndexes[1] + "]");
- */
+}
