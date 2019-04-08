@@ -27,16 +27,3 @@ public class shortenArray {
         return getLastPosition;
     }
 }
-
-//
-//
-// This method is not passing back the value found
-//for (; SmallArr [i] > value;i++)
-//        {
-//            //make the array smaller by removing the
-//
-//            int NewSmallArr [] = Arrays.copyOfRange(SmallArr, firstPosition+i, Arr.length);
-//            getLastPosition = index.findIndex(NewSmallArr, value);
-//            //getLastPosition = getLastPosition;
-//        }
-//
